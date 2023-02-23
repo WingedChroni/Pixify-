@@ -2,4 +2,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", "Sans-Seirf";
+}
+
+:root{
+    --darkmode:#2A3B49;
+    --cyan: #7BFFE9;
+}
+
+a{
+    text-decoration: none;
+}
+
+.black{
+    color: black;
+}
+
+.white{
+    color:white;
+}
+
+.cyan{
+    color: var(--cyan);
+}
+
+.flex {
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.center{
+    justify-content: center;
+}
+
+.alignCenter{
+    align-content: center;
+}
+
+.textCenter{
+    text-align: center;
 }
