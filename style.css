@@ -26,6 +26,11 @@ a{
     color: var(--cyan);
 }
 
+.bgDark {
+    background-color: var(--darkmode);
+}
+
+
 .flex {
     display: flex;
 }
