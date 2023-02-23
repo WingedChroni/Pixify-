@@ -68,6 +68,11 @@ a{
 
 
 /* Heading Styling */
+#title {
+    font-size: 36px;
+    padding: 8px 3%;
+}
+
 nav{
     flex-basis: 20%;
     background-color: tomato;
