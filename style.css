@@ -60,9 +60,43 @@ a{
     text-align: center;
 }
 
+.button {
+    color: var(--cyan);
+    border: 2px solid var(--cyan);
+    border-radius: 60px;
+}
+
 
 /* Heading Styling */
 nav{
     flex-basis: 20%;
     background-color: tomato;
+}
+
+#container{
+    position: relative;
+    flex-direction: column-reverse;
+}
+
+
+img{
+    width:100vw;
+}
+
+#intro{
+    width:45%;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    font-size:30px;
+    border-radius: 150px 150px 150px 0;
+    padding: 3%;
+}
+
+#subNow{
+    position:absolute;
+    right: 5%;
+    bottom: 5%;
+    padding: 2% 5%;
+    font-size:36px;
 }
