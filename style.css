@@ -12,6 +12,7 @@
 
 a{
     text-decoration: none;
+    color:white;
 }
 
 .black{
@@ -43,10 +44,25 @@ a{
     justify-content: center;
 }
 
+.spaceAround {
+    justify-content: space-around;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+}
+
 .alignCenter{
-    align-content: center;
+    align-items: center;
 }
 
 .textCenter{
     text-align: center;
+}
+
+
+/* Heading Styling */
+nav{
+    flex-basis: 20%;
+    background-color: tomato;
 }
