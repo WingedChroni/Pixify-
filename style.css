@@ -78,11 +78,11 @@ nav{
     background-color: tomato;
 }
 
+/* Landing Page style */
 #container{
     position: relative;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
 }
-
 
 img{
     width:100vw;
