@@ -84,7 +84,7 @@ nav{
     /* flex-direction: column-reverse; */
 }
 
-img{
+#container img{
     width:100vw;
 }
 
@@ -104,4 +104,24 @@ img{
     bottom: 5%;
     padding: 2% 5%;
     font-size:36px;
+}
+
+.preview{
+    display:grid;
+    font-size:20px;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: max-content;
+}
+
+.preview img{
+    width: 200px;
+}
+
+.caption {
+    display:flex;
+}
+
+.caption p{
+    font-size: 20px;
+    color:black;
 }

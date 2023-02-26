@@ -50,4 +50,24 @@ const imageSets = [
 
   ];
 
-  
+  const displayCatalog =(list) => {
+    const catalog = document.querySelector("#photoCatalog");
+    const preview = list.map(album=>{
+      console.log(album.images[0]);
+      return `<a class="preview" href="details.html?id=${album.id}">
+      <img src=${album.images[0]} alt=${album.title}>
+       <div class="caption">
+          <p>${album.title} - ${album.name}</p>
+          <p>see more</p>
+       </div>
+       </a>
+       `
+
+    });
+    console.log(`${preview}`);
+    catalog.innerHTML = preview.join("");
+  };
+
+  window.onload = function(){
+    displayCatalog(imageSets);
+  }
