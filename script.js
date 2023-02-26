@@ -55,8 +55,8 @@ const imageSets = [
     const preview = list.map(album=>{
       console.log(album.images[0]);
       return `<a class="preview" href="details.html?id=${album.id}">
-      <img src=${album.images[0]} alt=${album.title}>
-       <div class="caption">
+      <img src=${album.images[0]} alt=${album.title} class="preview-img">
+       <div class="black flex spaceBetween">
           <p>${album.title} - ${album.name}</p>
           <p>see more</p>
        </div>

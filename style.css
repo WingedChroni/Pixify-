@@ -106,22 +106,25 @@ nav{
     font-size:36px;
 }
 
-.preview{
-    display:grid;
-    font-size:20px;
-    grid-template-columns: repeat(auto-fill, 1fr);
-    grid-template-rows: max-content;
+/* Submissions Css */
+#submissions{
+    width: 60%;
 }
 
-.preview img{
-    width: 200px;
+#photoCatalog{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: max-content;
+    justify-content: center;
+    gap:20px;
+    padding:0 20px;
+    min-height:100vh;
 }
 
-.caption {
-    display:flex;
+.preview p{
+    font-size:16px;
 }
 
-.caption p{
-    font-size: 20px;
-    color:black;
+.preview-img{
+    width:100%;
 }
