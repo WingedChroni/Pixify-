@@ -68,13 +68,45 @@ const main = document.querySelector("main");
     catalog.innerHTML = preview.join("");
   };
 
-let currentId
+let currentId;
+let count = 0;
 
   window.onload = function(){
-    displayCatalog(imageSets);
+
     const urlParams = new URLSearchParams (window.location.search);
     currentId = urlParams.get("id");
+    console.log(currentId === null);
+
+    if(currentId === null){
+      displayCatalog(imageSets);
+    }else{
     console.log("current id is" + currentId);
+
+    const currentAlbum = imageSets.filter(album=>album.id==currentId);
+    console.log(currentAlbum[0]);
+  try{
+    console.log(currentAlbum[0].images[count]);
+    
+    const pic = `<h1>${currentAlbum[0].title}</h1>
+    <h2>${currentAlbum[0].name}</h2>
+    <img src=${currentAlbum[0].images[0]} alt=${currentAlbum[0].title} class="focused">
+    <p>${count} of ${currentAlbum[0].images.length}</p>
+    <div class="flex spaceBetween textCenter">
+      <button class="button bgDark noBorder font20" id="prev">Previous</button>
+      <button class="button bgDark noBorder font20" id="next">Next</button>
+    </div>`;
+    main.innerHTML = pic;
+
+    let temp = document.querySelector("main").lastChild;
+    temp.style.width="30%";   
+    temp.style.margin = "3% 2% 8% 0";
+  }catch(e){
+    if(e){
+      console.log("still no?");
+    }
+  }
+
+    }
   }
 
 const mode = document.querySelector("button.noBorder");
@@ -83,3 +115,4 @@ mode.addEventListener("click", (e)=>{
   // alert("working");
   main.classList.toggle("theme");
 })
+
