@@ -10,6 +10,10 @@
     --cyan: #7BFFE9;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 a{
     text-decoration: none;
     color:white;
@@ -60,10 +64,22 @@ a{
     text-align: center;
 }
 
+.font16{
+    font-size: 16px;
+}
+
 .button {
     color: var(--cyan);
     border: 2px solid var(--cyan);
     border-radius: 60px;
+}
+
+.noBorder{
+    border: none;
+}
+
+.theme{
+    background-color: var(--darkmode);
 }
 
 
@@ -73,9 +89,13 @@ a{
     padding: 8px 3%;
 }
 
+header div{
+    flex-basis:35%;
+}
+
 nav{
-    flex-basis: 20%;
-    background-color: tomato;
+    flex-basis: 70%;
+    /* background-color: tomato; */
 }
 
 /* Landing Page style */
@@ -145,7 +165,7 @@ h3{
 }
 
 main{
-    margin-top: 60px;
+    padding-top: 60px;
 }
 
 input{

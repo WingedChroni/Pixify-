@@ -10,10 +10,13 @@
 <body>
     <header class="bgDark flex spaceBetween">
         <a href="index.html" id="title" class="cyan">PIXIFY</a>
-        <nav class="flex spaceAround alignCenter">
-            <a href="submission.html">2023 Submissions</a>
-            <a href="about.html">About</a>
-        </nav>
+        <div class="flex spaceAround alignCenter">
+            <nav class="flex spaceAround">
+                <a href="submission.html">2023 Submissions</a>
+                <a href="about.html">About</a>
+            </nav>
+            <button onclick="toggleTheme()" class="white bgDark noBorder font16">Dark Mode</button>
+        </div>
     </header>
     <main class="flex spaceAround">
         <div id="submissions" class="flex column textCenter">

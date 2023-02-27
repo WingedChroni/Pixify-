@@ -50,6 +50,8 @@ const imageSets = [
 
   ];
 
+const main = document.querySelector("main");
+
   const displayCatalog =(list) => {
     const catalog = document.querySelector("#photoCatalog");
     const preview = list.map(album=>{
@@ -69,3 +71,10 @@ const imageSets = [
   window.onload = function(){
     displayCatalog(imageSets);
   }
+
+const mode = document.querySelector("button.noBorder");
+
+mode.addEventListener("click", (e)=>{
+  // alert("working");
+  main.classList.toggle("theme");
+})
