@@ -68,8 +68,13 @@ const main = document.querySelector("main");
     catalog.innerHTML = preview.join("");
   };
 
+let currentId
+
   window.onload = function(){
     displayCatalog(imageSets);
+    const urlParams = new URLSearchParams (window.location.search);
+    currentId = urlParams.get("id");
+    console.log("current id is" + currentId);
   }
 
 const mode = document.querySelector("button.noBorder");
