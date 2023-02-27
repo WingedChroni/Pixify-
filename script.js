@@ -191,6 +191,12 @@ const mode = document.querySelector("button.noBorder");
 
 mode.addEventListener("click", (e)=>{
   // alert("working");
-  main.classList.toggle("theme");
+  document.body.classList.toggle("theme");
+  console.log(document.body.classList.contains("theme"));
+  if(document.body.classList.contains("theme")){
+    mode.innerText="Light Mode";
+  }else{
+    mode.innerText="Dark Mode";
+  }
 })
 
