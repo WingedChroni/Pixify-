@@ -206,5 +206,14 @@ input{
 
 /* About page styling */
 #about {
-    width: 100vw;
+    width: 20vw;
+}
+
+#mission p{
+    margin-top: 25px;
+}
+
+.split{
+    gap: 10%;
+    padding: 10% 5%;
 }
