@@ -157,8 +157,9 @@ let count = 0;
   // }
   const next = document.querySelector("#next");
   next.addEventListener("click", (e)=>{
-    count++;
-    if(count<5){
+    
+    if(count<4){
+      count++;
       document.querySelector("img").src=gallery.images[count];
       document.querySelector("p").innerText=`${count+1} of 5`; 
     }
@@ -166,9 +167,10 @@ let count = 0;
 
   const previous = document.querySelector("#prev");
   previous.addEventListener("click", (e)=>{
-    count--;
+   
     // alert(count);
-    if(count>=0){
+    if(count>0){
+       count--;
       document.querySelector("img").src=gallery.images[count];
       document.querySelector("p").innerText=`${count+1} of 5`; 
     }

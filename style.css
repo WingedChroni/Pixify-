@@ -202,3 +202,9 @@ input{
     padding: 5%;
     width: 40%;
 }
+
+
+/* About page styling */
+#about {
+    width: 100vw;
+}
