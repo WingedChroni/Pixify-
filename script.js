@@ -90,16 +90,16 @@ let count = 0;
     const pic = `<h1>${currentAlbum[0].title}</h1>
     <h2>${currentAlbum[0].name}</h2>
     <img src=${currentAlbum[0].images[0]} alt=${currentAlbum[0].title} class="focused">
-    <p>${count} of ${currentAlbum[0].images.length}</p>
+    <p font20>${count} of ${currentAlbum[0].images.length}</p>
     <div class="flex spaceBetween textCenter">
       <button class="button bgDark noBorder font20" id="prev">Previous</button>
       <button class="button bgDark noBorder font20" id="next">Next</button>
     </div>`;
     main.innerHTML = pic;
-
+    document.querySelector("p").style.marginTop="2%";
     let temp = document.querySelector("main").lastChild;
     temp.style.width="30%";   
-    temp.style.margin = "3% 2% 8% 0";
+    temp.style.margin = "3% 0 8% 0";
   }catch(e){
     if(e){
       console.log("still no?");
