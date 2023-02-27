@@ -80,7 +80,55 @@ let count = 0;
 
     if(currentId === null){
       displayCatalog(imageSets);
+      const submit = document.querySelector("#submit");
+      submit.addEventListener("click", (e)=>{
+        e.preventDefault();
+        console.log("check");
+        const name = document.querySelector('input[name="name"]').value;
+        const title = document.querySelector('input[name="title"]').value;
+        const link1 = document.querySelector('input[name="link1"]').value;
+        const link2 = document.querySelector('input[name="link2"]').value;
+        const link3 = document.querySelector('input[name="link3"]').value;
+        const link4 = document.querySelector('input[name="link4"]').value;
+        const link5 = document.querySelector('input[name="link5"]').value;
+        
+        const newAddition = {
+          id: (imageSets.length+1),
+          name: name,
+          title: title,
+          images: [
+            link1,
+            link2,
+            link3,
+            link4,
+            link5
+          ]
+        };
+
+       alert(newAddition.id);
+        imageSets.push(newAddition);
+        console.log(imageSets);
+
+        const newPreview = document.createElement("div");
+        newPreview.innerHTML = 
+        `<a class="preview" href="details.html?id=${newAddition.id}">
+      <img src=${newAddition.images[0]} alt=${newAddition.title}>
+       <div class="black flex spaceBetween">
+          <p>${newAddition.title} - ${newAddition.name}</p>
+          <p>see more</p>
+       </div>
+       </a>`;
+
+       let test = document.querySelector("#photoCatalog");
+      //  test.append(newPreview);
+       test.insertBefore(newPreview, test.firstChild);
+        console.log("added");
+      });
+
+
+
     }else{
+      console.log(imageSets);
     console.log("current id is" + currentId);
 
     const currentAlbum = imageSets.filter(album=>album.id==currentId);
