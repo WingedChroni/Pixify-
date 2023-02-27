@@ -111,6 +111,17 @@ nav{
     width: 60%;
 }
 
+h2 {
+    margin-bottom: 5vh;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h3{
+    font-size:24px;
+    font-weight:700;
+}
+
 #photoCatalog{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -125,6 +136,35 @@ nav{
     font-size:16px;
 }
 
-.preview-img{
+.preview img{
     width:100%;
 }
+
+#form-container{
+    width:35%;
+}
+
+main{
+    margin-top: 60px;
+}
+
+input{
+    margin: 20px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+#info {
+    padding: 20px 40px;
+    background-color: var(--darkmode);
+}
+
+#submit {
+    font-size:20px;
+    padding: 4% 12%;
+
+}
+
+

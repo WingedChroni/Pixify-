@@ -17,14 +17,12 @@
     </header>
     <main class="flex spaceAround">
         <div id="submissions" class="flex column textCenter">
-            <h3>2023 Submissions</h3>
-            <div id="photoCatalog">
-               
-            </div>
+            <h2>2023 Submissions</h3>
+            <div id="photoCatalog"></div>
         </div>
-        <div id="form-container" class="flex column alignCenter textCenter bgDark">
-            <p class="white">SUBMIT YOUR WORK</p>
-            <form action="" class="flex column">
+        <div id="form-container" class="flex column alignCenter textCenter">
+            <form action="" class="flex column alignCenter textCenter" id="info">
+                <h3 class="white">SUBMIT YOUR WORK</h3>
                 <input type="text" name="name" placeholder="Your Name" >
                 <input type="text" name = "title" placeholder="Title of your Entry">
                 <input type= "url" name="link1" placeholder="Image Url One">
@@ -32,8 +30,9 @@
                 <input type= "url" name="link3" placeholder="Image Url Three">
                 <input type= "url" name="link4" placeholder="Image Url Four">
                 <input type= "url" name="link5" placeholder="Image Url Five">
+                <button type="submit" id="submit" class="button bgDark">Submit</button>
             </form>
-            <button id="submit" class="button bgDark">Submit</button>
+            
         </div>
     </main>
     <script src="script.js"></script>
