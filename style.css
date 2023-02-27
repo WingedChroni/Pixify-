@@ -206,11 +206,18 @@ input{
 
 /* About page styling */
 #about {
-    width: 20vw;
+    width: 30vw;
 }
 
 #mission p{
-    margin-top: 25px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#mission a{
+    display: block;
+    width:60%;
+    padding: 8% 10%;
 }
 
 .split{
