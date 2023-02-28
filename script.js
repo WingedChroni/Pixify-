@@ -192,11 +192,18 @@ let gallery;
 
 const pTags = document.querySelectorAll("p");
 const mode = document.querySelector("button.noBorder");
+const borders = document.querySelectorAll(".button");
+// console.log(borders);
+console.log(pTags);
 
 mode.addEventListener("click", (e)=>{
   // alert("working");
   document.body.classList.toggle("theme");
-  // const pTags = document.querySelectorAll("p");
+  // for (border of borders){
+  //   border.classList.toggle("noBorder");
+  // }
+  
+  const pTags = document.querySelectorAll("p");
   console.log(document.body.classList.contains("theme"));
   if(document.body.classList.contains("theme")){
     mode.innerText="Light Mode";
@@ -211,3 +218,6 @@ mode.addEventListener("click", (e)=>{
   }
 })
 
+
+
+// export const passedArr = 10;

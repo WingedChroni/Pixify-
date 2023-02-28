@@ -92,3 +92,14 @@ input{
     margin-top:10%;
     padding: 4% 0;
 }
+
+/* label {
+    display: block;
+    margin-top: 1em;
+}
+
+*:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+} */
