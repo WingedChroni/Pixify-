@@ -59,8 +59,8 @@ const main = document.querySelector("main");
       return `<a class="preview" href="details.html?id=${album.id}">
       <img src=${album.images[0]} alt=${album.title}>
        <div class="black flex spaceBetween">
-          <p>${album.title} - ${album.name}</p>
-          <p>see more</p>
+          <p class="font16">${album.title} - ${album.name}</p>
+          <p class="font16">see more</p>
        </div>
        </a>
        `
@@ -70,7 +70,7 @@ const main = document.querySelector("main");
 
 let currentId;
 let gallery;
-let count = 0;
+
 
   window.onload = function(){
 
@@ -128,7 +128,9 @@ let count = 0;
 
 
     }else{
-      console.log(imageSets);
+
+    let count = 0;
+    console.log(imageSets);
     console.log("current id is" + currentId);
 
     const currentAlbum = imageSets.filter(album=>album.id==currentId);
@@ -137,55 +139,54 @@ let count = 0;
   // try{
     console.log(currentAlbum[0].images[count]);
     
-    const pic = `<h1>${currentAlbum[0].title}</h1>
-    <h2>${currentAlbum[0].name}</h2>
+    const pic = `<p class="font36 bold">${currentAlbum[0].title}</p>
+    <p class="font36">${currentAlbum[0].name}</p>
     <img src=${currentAlbum[0].images[0]} alt=${currentAlbum[0].title} class="focused">
-    <p font20>${count+1} of ${currentAlbum[0].images.length}</p>
+    <p>${count+1} of ${currentAlbum[0].images.length}</p>
     <div class="flex spaceBetween textCenter">
       <button class="button bgDark noBorder font20" id="prev">Previous</button>
       <button class="button bgDark noBorder font20" id="next">Next</button>
     </div>`;
     main.innerHTML = pic;
-    document.querySelector("p").style.marginTop="2%";
-    let temp = main.lastChild;
-    temp.style.width="30%";   
-    temp.style.margin = "3% 0 8% 0";
+    const childNodes = document.querySelectorAll("p, img");
+    for (x of childNodes){
+      x.style.marginTop="3%";
+    }
+
+    let buttons = main.lastChild;
+    buttons.style.width="30%";   
+    buttons.style.margin = "3% 0 8% 0";
   // }catch(e){
   //   if(e){
   //     console.log("still no?");
   //   }
   // }
+  let display = document.querySelector("img");
   const next = document.querySelector("#next");
   next.addEventListener("click", (e)=>{
     
     if(count<4){
       count++;
-      document.querySelector("img").src=gallery.images[count];
-      document.querySelector("p").innerText=`${count+1} of 5`; 
+      display.src=gallery.images[count];
+      display.nextElementSibling.innerText=`${count+1} of 5`;
     }
   });
-
   const previous = document.querySelector("#prev");
   previous.addEventListener("click", (e)=>{
-   
+    alert(count);
     // alert(count);
-    if(count>0){
-       count--;
-      document.querySelector("img").src=gallery.images[count];
-      document.querySelector("p").innerText=`${count+1} of 5`; 
+    count--;
+    if(count>=0){
+      display.src=gallery.images[count];
+      display.nextElementSibling.innerText=`${count+1} of 5`; 
+    }else{
+      alert("done");
+      previous.disabled=true;
     }
   });
   }
 }
 
-// const previous = document.querySelector("#next");
-// previous.addEventListener("click", (e)=>{
-//   count++;
-//   alert(count);
-//   if(count<5){
-//     document.querySelector("img").src=gallery.images[count];
-//   }
-// });
 
 const mode = document.querySelector("button.noBorder");
 
