@@ -175,8 +175,9 @@ let gallery;
   previous.addEventListener("click", (e)=>{
     alert(count);
     // alert(count);
-    count--;
-    if(count>=0){
+    
+    if(count>0){
+      count--;
       display.src=gallery.images[count];
       display.nextElementSibling.innerText=`${count+1} of 5`; 
     }else{
