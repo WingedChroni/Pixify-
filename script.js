@@ -164,17 +164,19 @@ let gallery;
   let display = document.querySelector("img");
   const next = document.querySelector("#next");
   next.addEventListener("click", (e)=>{
-    
+    previous.disabled=false;
     if(count<4){
       count++;
       display.src=gallery.images[count];
       display.nextElementSibling.innerText=`${count+1} of 5`;
+    }else{
+      next.disabled=true;
     }
   });
   const previous = document.querySelector("#prev");
   previous.addEventListener("click", (e)=>{
-    alert(count);
     // alert(count);
+    next.disabled=false;
     
     if(count>0){
       count--;

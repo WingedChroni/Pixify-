@@ -64,6 +64,10 @@ p{
     align-items: center;
 }
 
+.pageCenter{
+    margin:0 auto;
+}
+
 .textCenter{
     text-align: center;
 }
@@ -108,6 +112,10 @@ p{
     color: var(--cyan);
     border: 2px solid var(--cyan);
     border-radius: 60px;
+}
+
+.shrink95{
+    width:95%;
 }
 
 .noBorder{
