@@ -1,134 +1,43 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", "Sans-Seirf";
-}
 
-:root{
-    --darkmode:#2A3B49;
-    --cyan: #7BFFE9;
-}
-
-a, button {
-    cursor: pointer;
-}
-
-a{
-    text-decoration: none;
-    color:white;
-}
-
-.black{
-    color: black;
-}
-
-.white{
-    color:white;
-}
-
-.cyan{
-    color: var(--cyan);
-}
-
-.bgDark {
-    background-color: var(--darkmode);
-}
-
-
-.flex {
-    display: flex;
-}
-
-.column{
-    flex-direction: column;
-}
-
-.center{
-    justify-content: center;
-}
-
-.spaceAround {
-    justify-content: space-around;
-}
-
-.spaceBetween{
-    justify-content: space-between;
-}
-
-.alignCenter{
-    align-items: center;
-}
-
-.textCenter{
-    text-align: center;
-}
-
-.font16{
-    font-size: 16px;
-}
-
-.font20{
-    font-size: 20px;
-}
-
-.button {
-    color: var(--cyan);
-    border: 2px solid var(--cyan);
-    border-radius: 60px;
-}
-
-.noBorder{
-    border: none;
-}
-
-.theme{
-    background-color: var(--darkmode);
-}
-
-
-/* Heading Styling */
+/* Heading Styling*/
 #title {
-    font-size: 36px;
     padding: 8px 3%;
 }
 
 header div{
-    flex-basis:35%;
+    flex-basis:40%;
 }
 
-nav{
-    flex-basis: 70%;
-    /* background-color: tomato; */
+header div button{
+    padding-right: 10%;
 }
 
-/* Landing Page style */
-#container{
+
+/* Landing Page style added to js*/
+/* #container{
     position: relative;
-    /* flex-direction: column-reverse; */
-}
+} */
 
-#container img{
+/* #container img{
     width:100vw;
-}
+} */
 
-#intro{
+/* #intro{
     width:45%;
     position: absolute;
     bottom:0;
     left: 0;
-    font-size:30px;
     border-radius: 150px 150px 150px 0;
     padding: 3%;
-}
+} */
 
-#subNow{
+/* #subNow{
     position:absolute;
     right: 5%;
     bottom: 5%;
     padding: 2% 5%;
     font-size:36px;
-}
+} */
 
 /* Submissions Css */
 #submissions{
