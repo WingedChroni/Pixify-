@@ -196,11 +196,16 @@ const mode = document.querySelector("button.noBorder");
 mode.addEventListener("click", (e)=>{
   // alert("working");
   document.body.classList.toggle("theme");
+  const pTags = document.querySelectorAll("p");
   console.log(document.body.classList.contains("theme"));
   if(document.body.classList.contains("theme")){
     mode.innerText="Light Mode";
+    for (p of pTags){
+      p.style.color ="white";
+    }
   }else{
     mode.innerText="Dark Mode";
+    p.style.color="black";
   }
 })
 
