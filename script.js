@@ -190,13 +190,13 @@ let gallery;
   }
 }
 
-
+const pTags = document.querySelectorAll("p");
 const mode = document.querySelector("button.noBorder");
 
 mode.addEventListener("click", (e)=>{
   // alert("working");
   document.body.classList.toggle("theme");
-  const pTags = document.querySelectorAll("p");
+  // const pTags = document.querySelectorAll("p");
   console.log(document.body.classList.contains("theme"));
   if(document.body.classList.contains("theme")){
     mode.innerText="Light Mode";
@@ -205,7 +205,9 @@ mode.addEventListener("click", (e)=>{
     }
   }else{
     mode.innerText="Dark Mode";
-    p.style.color="black";
+    for (p of pTags){
+      p.style.color ="black";
+    }
   }
 })
 
