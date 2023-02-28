@@ -76,9 +76,9 @@ input{
 
 /* About page styling */
 #about {
-    width: 35vw;
+    width: 30vw;
     border-radius: 1%;
-    /* margin-top: 5%; */
+
 }
 
 #mission p{

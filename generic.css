@@ -108,14 +108,18 @@ p{
     padding-top:4%;
 }
 
+.padBot6{
+    padding-bottom: 6%;
+}
+
 .button {
     color: var(--cyan);
     border: 2px solid var(--cyan);
     border-radius: 60px;
 }
 
-.shrink95{
-    width:95%;
+.shrink90{
+    width:90%;
 }
 
 .noBorder{
