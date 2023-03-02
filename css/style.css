@@ -40,7 +40,7 @@ header div{
     justify-content: center;
     gap:5% 7%;
     margin-top: 5vh;
-    min-height:100vh;
+    /* min-height:100vh; */
 }
 
 .preview img{
@@ -169,9 +169,9 @@ input{
     display: block;
    }
 
-   input{
+   /* input{
     font-size:10px;
-   }
+   } */
 
 
 }
@@ -182,10 +182,11 @@ input{
         align-content: center;
         align-items: center;
         width: 100%;
+        /* padding-top: 1%; */
     }
 
-    #submission{
-        width: 100%;
+    #submissions{
+        width: 90%;
     }
 
     #form-container{
