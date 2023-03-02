@@ -72,6 +72,14 @@ p{
     text-align: center;
 }
 
+.textRight{
+    text-align: right;
+}
+
+.font2vw{
+    font-size: 2vw;
+}
+
 .font10{
     font-size:10px;
 }

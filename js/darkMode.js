@@ -1,5 +1,5 @@
 const pTags = document.querySelectorAll("p");
-const mode = document.querySelector("button.noBorder");
+const mode = document.querySelector("button.noBorder.font16");
 const borders = document.querySelectorAll(".button.noBorder");
 console.log(borders);
 console.log(pTags);
