@@ -50,71 +50,70 @@ const imageSets = [
 
   ];
 
-  const main = document.querySelector("main");
-  let count = 0;
-  let currentId;
-  let gallery;
-  let display;
-  let buttons = document.querySelector("div.textCenter");
-  console.log(buttons);
+const main = document.querySelector("main");
+let count = 0;
+let currentId;
+let gallery;
+let display;
+let buttons = document.querySelector("div.textCenter");
+
+window.onload = function(){
+  const urlParams = new URLSearchParams (window.location.search);
+  currentId = urlParams.get("id");
   
-  window.onload = function(){
-    const urlParams = new URLSearchParams (window.location.search);
-    currentId = urlParams.get("id");
-    console.log(currentId === null);
-    
-    buttons.style.width="30%";   
-    buttons.style.margin = "3% 0 8% 0";
-    
-    console.log(imageSets);
-    console.log("current id is" + currentId);
-
-    const currentAlbum = imageSets.filter(album=>album.id==currentId);
-
-    gallery=currentAlbum[0].images;
-
-    console.log(gallery[count]);
-    
-    const pic = `<p class="font36 bold">${currentAlbum[0].title}</p>
-    <p class="font36">${currentAlbum[0].name}</p>
-    <img src=${gallery[0]} alt=${currentAlbum[0].title} class="focused">
-    <p>${count+1} of ${gallery.length}</p>`;
-    main.firstElementChild.innerHTML = pic;
-    const childNodes = document.querySelectorAll("p, img");
-    for (x of childNodes){
-      x.style.marginTop="3%";
-    }
-    display = document.querySelector("img");
+  buttons.style.width="30%";   
+  buttons.style.margin = "3% 0 8% 0";
+  
+  // console.log(imageSets);
+  // console.log("current id is" + currentId);
+  const currentAlbum = imageSets.filter(album=>album.id==currentId);
+  gallery=currentAlbum[0].images;
+  // console.log(gallery[count]);
+  
+  const pic = `<p class="font36 bold">${currentAlbum[0].title}</p>
+  <p class="font36">${currentAlbum[0].name}</p>
+  <img src=${gallery[0]} alt=${currentAlbum[0].title} class="focused">
+  <p>${count+1} of ${gallery.length}</p>`;
+  main.firstElementChild.innerHTML = pic;
+  const childNodes = document.querySelectorAll("p, img");
+  for (x of childNodes){
+    x.style.marginTop="3%";
+  }
+  display = document.querySelector("img");
  
 };
 
-
-console.log("display is " + display);
+//Add functionality to Next button, disabling when limit is reached
 const next = document.querySelector("#next");
   next.addEventListener("click", (e)=>{
+
     previous.disabled=false;
-    console.log(count);
+
     if(count<4){
-    
       count++;
       display.src=gallery[count];
       display.nextElementSibling.innerText=`${count+1} of 5`;
-    }else{
+    }
+    if (count>=4){
       next.disabled=true;
     }
   });
+
+  //Add functionality to Previous button, disabling when limit is reached
   const previous = document.querySelector("#prev");
+  //Previous starts disabled
+  previous.disabled=true;
   previous.addEventListener("click", (e)=>{
-    console.log(count);
-    // alert(count);
+
     next.disabled=false;
-    
+
     if(count>0){
       count--;
       display.src=gallery[count];
       display.nextElementSibling.innerText=`${count+1} of 5`; 
-    }else{
-      alert("done");
+    }
+    if(count<=0){
+
       previous.disabled=true;
     }
   });

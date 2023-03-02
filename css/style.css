@@ -1,4 +1,11 @@
 
+/* Disabled styling */
+*:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
+
 /* Heading Styling*/
 #title {
     padding: 8px 3%;
@@ -96,10 +103,4 @@ input{
 /* label {
     display: block;
     margin-top: 1em;
-}
-
-*:disabled {
-    background-color: dimgrey;
-    color: linen;
-    opacity: 1;
 } */
