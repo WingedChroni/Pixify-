@@ -55,43 +55,37 @@ const imageSets = [
   let currentId;
   let gallery;
   let display;
+  let buttons = document.querySelector("div.textCenter");
+  console.log(buttons);
   
   window.onload = function(){
-
     const urlParams = new URLSearchParams (window.location.search);
     currentId = urlParams.get("id");
     console.log(currentId === null);
-
-
+    
+    buttons.style.width="30%";   
+    buttons.style.margin = "3% 0 8% 0";
     
     console.log(imageSets);
     console.log("current id is" + currentId);
 
     const currentAlbum = imageSets.filter(album=>album.id==currentId);
-    console.log(currentAlbum[0].images);
+
     gallery=currentAlbum[0].images;
-    console.log(`gallery is ${gallery}`);
-  // try{
-    console.log(currentAlbum[0].images[count]);
+
+    console.log(gallery[count]);
     
     const pic = `<p class="font36 bold">${currentAlbum[0].title}</p>
     <p class="font36">${currentAlbum[0].name}</p>
-    <img src=${currentAlbum[0].images[0]} alt=${currentAlbum[0].title} class="focused">
-    <p>${count+1} of ${currentAlbum[0].images.length}</p>`;
-    main.innerHTML = pic;
+    <img src=${gallery[0]} alt=${currentAlbum[0].title} class="focused">
+    <p>${count+1} of ${gallery.length}</p>`;
+    main.firstElementChild.innerHTML = pic;
     const childNodes = document.querySelectorAll("p, img");
     for (x of childNodes){
       x.style.marginTop="3%";
     }
     display = document.querySelector("img");
-    let buttons = document.body.children[2];
-    buttons.style.width="30%";   
-    buttons.style.margin = "3% 0 8% 0";
-  // }catch(e){
-  //   if(e){
-  //     console.log("still no?");
-  //   }
-  // }  
+ 
 };
 
 
