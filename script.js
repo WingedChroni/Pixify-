@@ -78,7 +78,7 @@ let gallery;
     currentId = urlParams.get("id");
     console.log(currentId === null);
 
-    if(currentId === null){
+   
       displayCatalog(imageSets);
       const submit = document.querySelector("#submit");
       submit.addEventListener("click", (e)=>{
@@ -125,69 +125,6 @@ let gallery;
         console.log("added");
       });
 
-
-
-    }else{
-
-    let count = 0;
-    console.log(imageSets);
-    console.log("current id is" + currentId);
-
-    const currentAlbum = imageSets.filter(album=>album.id==currentId);
-    console.log(currentAlbum[0]);
-    gallery=currentAlbum[0];
-  // try{
-    console.log(currentAlbum[0].images[count]);
-    
-    const pic = `<p class="font36 bold">${currentAlbum[0].title}</p>
-    <p class="font36">${currentAlbum[0].name}</p>
-    <img src=${currentAlbum[0].images[0]} alt=${currentAlbum[0].title} class="focused">
-    <p>${count+1} of ${currentAlbum[0].images.length}</p>
-    <div class="flex spaceBetween textCenter">
-      <button class="button bgDark noBorder font20" id="prev">Previous</button>
-      <button class="button bgDark noBorder font20" id="next">Next</button>
-    </div>`;
-    main.innerHTML = pic;
-    const childNodes = document.querySelectorAll("p, img");
-    for (x of childNodes){
-      x.style.marginTop="3%";
-    }
-
-    let buttons = main.lastChild;
-    buttons.style.width="30%";   
-    buttons.style.margin = "3% 0 8% 0";
-  // }catch(e){
-  //   if(e){
-  //     console.log("still no?");
-  //   }
-  // }
-  let display = document.querySelector("img");
-  const next = document.querySelector("#next");
-  next.addEventListener("click", (e)=>{
-    previous.disabled=false;
-    if(count<4){
-      count++;
-      display.src=gallery.images[count];
-      display.nextElementSibling.innerText=`${count+1} of 5`;
-    }else{
-      next.disabled=true;
-    }
-  });
-  const previous = document.querySelector("#prev");
-  previous.addEventListener("click", (e)=>{
-    // alert(count);
-    next.disabled=false;
-    
-    if(count>0){
-      count--;
-      display.src=gallery.images[count];
-      display.nextElementSibling.innerText=`${count+1} of 5`; 
-    }else{
-      alert("done");
-      previous.disabled=true;
-    }
-  });
-  }
 }
 
 const pTags = document.querySelectorAll("p");
@@ -220,4 +157,3 @@ mode.addEventListener("click", (e)=>{
 
 
 
-// export const passedArr = 10;
