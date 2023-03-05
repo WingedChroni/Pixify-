@@ -54,6 +54,7 @@ const main = document.querySelector("main");
 let currentId;
 let gallery;
 
+//display the catalog of albums
 const displayCatalog =(list) => {
   const catalog = document.querySelector("#photoCatalog");
   const preview = list.map(album=>{
@@ -70,19 +71,15 @@ const displayCatalog =(list) => {
   catalog.innerHTML = preview.join("");
 };
 
-
+//load the intial preview
 window.onload = function(){
-    // const urlParams = new URLSearchParams (window.location.search);
-    // currentId = urlParams.get("id");
-    // console.log(currentId === null);
   displayCatalog(imageSets);
-
 }
 
+//submit button
 const submit = document.querySelector("#submit");
 submit.addEventListener("click", (e)=>{
   
-  //prevents required from working
   e.preventDefault();
 
   const name = document.querySelector('input[name="name"]').value;
@@ -127,20 +124,3 @@ submit.addEventListener("click", (e)=>{
   
   document.querySelector("form").reset();
 });             
-
-// const hamburger = document.querySelector(".hamburger");
-// hamburger.addEventListener("click", (e)=>{
-//   let navBar = document.querySelector("div.flex");
-//   document.querySelector("nav").classList.toggle("links");
-//   navBar.classList.toggle("mobile-menu");
-// });
-// console.log(hamburger.innerHTML);
-
-// window.onclick = function(event) {
-//   console.log(event.target.matches("#dropBtn"));
-//   if (!event.target.matches("#dropBtn")) {
-//     document.querySelector("div.flex").classList.remove("mobile-menu");
-//     document.querySelector("nav").classList.remove("links");
-//     console.log(`nav no longer ${document.querySelector("nav").classList.contains("links")}`);
-//   }
-// }

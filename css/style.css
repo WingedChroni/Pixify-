@@ -27,7 +27,6 @@ header div{
     display:none;
 }
 
-
 /* Submissions Css */
 #submissions{
     width: 55%;
@@ -108,12 +107,7 @@ input{
     padding: 4% 0;
 }
 
-/* label {
-    display: block;
-    margin-top: 1em;
-} */
-
-
+/* Responsive scaling */
 @media screen and (max-width: 900px){
    .hide{
     display: none;
@@ -122,7 +116,6 @@ input{
    .hamburger{
     display: block;
    }
-
 
    .mobile-menu{
     background-color: var(--darkmode);
@@ -134,7 +127,6 @@ input{
     align-self:center;
     width:100%;
     position: absolute;
-    /* right:4%; */
     z-index: 1;
     top:70px;
     justify-content: space-evenly;
@@ -146,7 +138,6 @@ input{
     z-index: 1;
     right: 0;
     top: 200px;
-    
    }
 
    .links{
@@ -168,14 +159,12 @@ input{
     align-items: center;
     width: 100%;
     padding-top: 0;
-}
+    }
 
    #about{
     width: 100%;
     margin: 4% 0;
-}
-
-
+    }
 }
 
 @media screen and (max-width: 736px){
@@ -186,7 +175,6 @@ input{
         width: 100%;
         padding-top: 0;
     }
-
 
     #submissions{
         width: 90%;

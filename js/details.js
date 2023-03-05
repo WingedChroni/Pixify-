@@ -63,12 +63,9 @@ window.onload = function(){
   
   buttons.style.width="30%";   
   buttons.style.margin = "3% 0 8% 0";
-  
-  // console.log(imageSets);
-  // console.log("current id is" + currentId);
+ 
   const currentAlbum = imageSets.filter(album=>album.id==currentId);
   gallery=currentAlbum[0].images;
-  // console.log(gallery[count]);
   
   const pic = `<p class="font36 bold">${currentAlbum[0].title}</p>
   <p class="font36">${currentAlbum[0].name}</p>

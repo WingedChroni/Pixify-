@@ -5,7 +5,6 @@ const container = document.querySelector("#container");
 container.style.position="relative";
 
 container.firstElementChild.style.width="100%";
-// container.firstElementChild.style.height="100vh";
 
 //message styling
 container.firstElementChild.nextElementSibling.style = `width:45%;

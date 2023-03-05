@@ -4,6 +4,7 @@ const borders = document.querySelectorAll(".button.noBorder");
 console.log(borders);
 console.log(pTags);
 
+//add functionality to dark mode button
 mode.addEventListener("click", (e)=>{
   document.body.classList.toggle("theme");
   for (border of borders){
@@ -25,7 +26,7 @@ mode.addEventListener("click", (e)=>{
   }
 })
 
-//Hamburger
+//Hamburger menu
 const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", (e)=>{
   let navBar = document.querySelector("div.flex");
