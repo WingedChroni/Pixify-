@@ -128,19 +128,19 @@ submit.addEventListener("click", (e)=>{
   document.querySelector("form").reset();
 });             
 
-const hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", (e)=>{
-  let navBar = document.querySelector("div.flex");
-  document.querySelector("nav").classList.toggle("links");
-  navBar.classList.toggle("mobile-menu");
-});
-console.log(hamburger.innerHTML);
+// const hamburger = document.querySelector(".hamburger");
+// hamburger.addEventListener("click", (e)=>{
+//   let navBar = document.querySelector("div.flex");
+//   document.querySelector("nav").classList.toggle("links");
+//   navBar.classList.toggle("mobile-menu");
+// });
+// console.log(hamburger.innerHTML);
 
-window.onclick = function(event) {
-  console.log(event.target.matches("#dropBtn"));
-  if (!event.target.matches("#dropBtn")) {
-    document.querySelector("div.flex").classList.remove("mobile-menu");
-    document.querySelector("nav").classList.remove("links");
-    console.log(`nav no longer ${document.querySelector("nav").classList.contains("links")}`);
-  }
-}
+// window.onclick = function(event) {
+//   console.log(event.target.matches("#dropBtn"));
+//   if (!event.target.matches("#dropBtn")) {
+//     document.querySelector("div.flex").classList.remove("mobile-menu");
+//     document.querySelector("nav").classList.remove("links");
+//     console.log(`nav no longer ${document.querySelector("nav").classList.contains("links")}`);
+//   }
+// }
