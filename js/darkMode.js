@@ -5,7 +5,6 @@ console.log(borders);
 console.log(pTags);
 
 mode.addEventListener("click", (e)=>{
-  // alert("working");
   document.body.classList.toggle("theme");
   for (border of borders){
     border.classList.toggle("noBorder");
@@ -26,6 +25,7 @@ mode.addEventListener("click", (e)=>{
   }
 })
 
+//Hamburger
 const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", (e)=>{
   let navBar = document.querySelector("div.flex");
