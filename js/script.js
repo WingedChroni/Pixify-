@@ -1,4 +1,5 @@
-const imageSets = [
+//initial render
+let imageSets = [
     {
       id:1,  
       name: 'Andrew Smith',
@@ -73,6 +74,14 @@ const displayCatalog =(list) => {
 
 //load the intial preview
 window.onload = function(){
+
+  //determine if there is updated list
+  if (localStorage.getItem("imageSets")== null){
+    localStorage.setItem("imageSets", JSON.stringify(imageSets));
+  }else{
+    imageSets = JSON.parse (localStorage.getItem("imageSets"));
+  }
+
   displayCatalog(imageSets);
 }
 
@@ -103,8 +112,10 @@ submit.addEventListener("click", (e)=>{
     ]
   };
 
+  //add new addition to list
   imageSets.push(newAddition);
-  console.log(imageSets);
+  localStorage.setItem("imageSets", JSON.stringify(imageSets));
+
   let color = "black";
   if(document.body.classList.contains("theme")){
     color = "white";
@@ -119,8 +130,9 @@ submit.addEventListener("click", (e)=>{
     <p>see more</p>
   </div>
   </a>`;
-  let test = document.querySelector("#photoCatalog");
-  test.insertBefore(newPreview, test.firstChild);
+  let newPic = document.querySelector("#photoCatalog");
+  newPic.insertBefore(newPreview, newPic.firstChild);
   
+
   document.querySelector("form").reset();
 });             

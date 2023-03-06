@@ -21,3 +21,6 @@ right: 5%;
 bottom: 5%;
 padding: 2% 5%;
 font-size:36px;`;
+
+//Reset the local storage when opening the homepage
+localStorage.clear();
